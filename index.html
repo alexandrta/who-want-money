@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Millionaire</title>
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="game-container">
+            <div class="area-question">
+                <div id="question" class="area-question__question">
+                    Сколько будет 2 + 2 ?
+                </div>
+                <div id="answers" class="area-question__answers">
+                    <!--<div class="answer">-->
+                        <!--<label for="one">Ответ 1</label>-->
+                        <!--<input id="one" type="radio" name="answer" value="Ответ 1">-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="stairs">
+                    <div class="hints"></div>
+                    <ul class="levels-prices">
+                        <li data-money="100" class="level current">100$</li>
+                        <li data-money="200" class="level">200$</li>
+                        <li data-money="300" class="level">300$</li>
+                        <li data-money="500" class="level">500$</li>
+                        <li data-money="800" class="level">800$</li>
+                        <li data-money="1000" class="level">1000$</li>
+                        <li data-money="2000" class="level">2000$</li>
+                        <li data-money="5000" class="level">5000$</li>
+                        <li data-money="10000" class="level">10 000$</li>
+                        <li data-money="20000" class="level">20 000$</li>
+                    </ul>
+                </div>
+                <button class="answerAction" onclick="confirmTheAnswer()">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
+    <script src="questions.js"></script>
+</body>
+</html>
