@@ -14,9 +14,19 @@ const confirmTheAnswer = () => {
 ;}
 // class current  в хтм добавляет подсветку
 const increaseLevel = () => {
-	levelsLIArray[currentLevel].classList.remove('current');
-	currentLevel += 1;
-	levelsLIArray[currentLevel].classList.add('current');
+	if (currentLevel < 9) {
+		levelsLIArray[currentLevel].classList.remove('current');
+		levelsLIArray[currentLevel].classList.add('done');  // добавляем название класса, чтобы изменить цвет (в css class done имеет серый цвет)
+		currentLevel += 1;
+		levelsLIArray[currentLevel].classList.add('current');
+	} else {
+		levelsLIArray[currentLevel].classList.remove('current');
+		levelsLIArray[currentLevel].classList.add('done');  // добавляем название класса, чтобы изменить цвет (в css class done имеет серый цвет)
+		setTimeout(() => alert('Вы выиграли 20 000$!'), 1); // устанавливаю таймаут, чтобы сначала убралась полоска, а потом сработал alert
+		document.getElementById('b1').hidden = true // прячу обе кнопки, чтобы больше не кликали
+		document.getElementById('b2').hidden = true
+
+	} 
 };
 
 // --------- Create helpers

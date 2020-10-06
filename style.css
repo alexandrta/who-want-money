@@ -102,3 +102,7 @@ ul {
     background-color: #bb7900;
     color: white;
 }
+
+.level.done {
+    color: gray;
+}
